@@ -82,7 +82,7 @@ class SparkParallelismTracker(
     try {
       body
     } finally {
-      sc.removeSparkListener(listener)
+      sc.listenerBus.removeListener(listener)
     }
   }
 
